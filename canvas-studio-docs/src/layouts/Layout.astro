@@ -4,9 +4,15 @@ import '../styles/original.css';
 interface Props {
 	title: string;
 	description?: string;
+	image?: string;
 }
 
 const { title, description = "Complete feature inventory of Canvas Studio, the Clicker Platform WYSIWYG page builder." } = Astro.props;
+
+// Construct full URL for canonical and OG tags
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImage = 'https://eghpbodxkrjgciza.public.blob.vercel-storage.com/clicker-kb-og.webp';
+const faviconUrl = 'https://eghpbodxkrjgciza.public.blob.vercel-storage.com/Clicker%20FC.webp';
 ---
 
 <!doctype html>
@@ -15,9 +21,31 @@ const { title, description = "Complete feature inventory of Canvas Studio, the C
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/webp" href={faviconUrl} />
+		<link rel="apple-touch-icon" href={faviconUrl} />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonicalURL} />
+		
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={socialImage} />
+		<meta property="og:site_name" content="Canvas Studio Documentation" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={socialImage} />
 		
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />

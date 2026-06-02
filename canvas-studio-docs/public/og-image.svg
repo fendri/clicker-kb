@@ -1,0 +1,25 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lime green background matching Clicker brand -->
+  <rect width="1200" height="630" fill="#C5F82A"/>
+  
+  <!-- Clicker logo (large C with 3D effect) centered -->
+  <g transform="translate(140, 165)">
+    <!-- Main C shape -->
+    <path d="M0 0H150V75H75V225H150V300H0V225V75V0Z" fill="#000000"/>
+    <path d="M75 75H150V225H75V75Z" fill="#C5F82A"/>
+    
+    <!-- 3D effect - right side -->
+    <path d="M150 0L225 37.5V262.5L150 300V0Z" fill="#000000" opacity="0.8"/>
+    
+    <!-- 3D effect - bottom -->
+    <path d="M0 300L225 262.5L150 300L75 281.25L0 300Z" fill="#000000" opacity="0.6"/>
+  </g>
+  
+  <!-- Text content -->
+  <text x="420" y="260" font-family="Space Grotesk, sans-serif" font-size="72" font-weight="700" fill="#000000">Canvas Studio</text>
+  <text x="420" y="340" font-family="Space Grotesk, sans-serif" font-size="42" font-weight="500" fill="#000000">Feature Inventory</text>
+  <text x="420" y="420" font-family="IBM Plex Sans, sans-serif" font-size="28" font-weight="400" fill="#1a1a1a">Complete WYSIWYG page builder documentation</text>
+  
+  <!-- Footer branding -->
+  <text x="420" y="540" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="500" fill="#1a1a1a" opacity="0.7">CLICKER PLATFORM</text>
+</svg>
